@@ -1,6 +1,6 @@
-# 🧩 마음쉼터 - 분쟁지역 청소년 심리 지원 플랫폼
+# 🌉 Bridge-X - Refugee Youth Mental Health Platform
 
-분쟁지역 청소년의 감정 회복 지원을 위한 **AI 챗봇 기반 심리 지원 웹 플랫폼**입니다.
+AI-powered psychological support platform for refugee youth in conflict zones, powered by **Google Gemini** and **Cisco Webex**.
 
 ---
 

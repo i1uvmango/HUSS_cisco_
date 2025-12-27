@@ -9,8 +9,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "마음쉼터 | 청소년 심리 지원 플랫폼",
-  description: "분쟁지역 청소년을 위한 AI 기반 심리 지원 서비스. 안전한 공간에서 마음을 나누세요.",
+  title: "Bridge-X | 전쟁 지역 청소년 심리 상담 플랫폼",
+  description: "전쟁 지역 청소년을 위한 AI 기반 심리 상담 서비스. 안전한 공간에서 마음을 나누세요.",
 };
 
 export default function RootLayout({

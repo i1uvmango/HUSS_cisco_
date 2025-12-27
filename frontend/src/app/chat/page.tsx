@@ -92,33 +92,31 @@ export default function ChatPage() {
 
     if (!isStarted) {
         return (
-            <div style={{ height: 'calc(100vh - 80px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem' }}>
-                <div className="card" style={{ maxWidth: '28rem', width: '100%', textAlign: 'center' }}>
-                    <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }} className="animate-float">🌿</div>
-                    <h1 className="gradient-text" style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-                        마음쉼터에 오신 것을 환영해요
+            <div style={{ height: 'calc(100vh - 80px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem', background: 'linear-gradient(180deg, #e8f4fc 0%, #d4e8f5 100%)' }}>
+                <div style={{ maxWidth: '28rem', width: '100%', textAlign: 'center', background: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(10px)', borderRadius: '1rem', padding: '2rem', border: '1px solid rgba(107, 155, 210, 0.2)', boxShadow: '0 4px 20px rgba(107, 155, 210, 0.15)' }}>
+                    <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>🌉</div>
+                    <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem', background: 'linear-gradient(90deg, #3b82f6, #10b981)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                        Welcome to Bridge-X
                     </h1>
                     <p style={{ color: '#6b7280', marginBottom: '1.5rem' }}>
-                        상담을 시작하기 전에 닉네임을 알려주세요.
+                        Enter your nickname to start.
                         <br />
-                        실명이 아니어도 괜찮아요.
+                        It doesn't have to be your real name.
                     </p>
                     <input
                         type="text"
                         value={nickname}
                         onChange={(e) => setNickname(e.target.value)}
-                        placeholder="닉네임을 입력해주세요"
-                        className="input"
-                        style={{ marginBottom: '1rem' }}
+                        placeholder="Enter your nickname"
+                        style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', border: '1px solid rgba(107, 155, 210, 0.3)', background: 'white', color: '#374151', marginBottom: '1rem', fontSize: '1rem' }}
                         onKeyPress={(e) => e.key === 'Enter' && handleStart()}
                     />
                     <button
                         onClick={handleStart}
                         disabled={!nickname.trim()}
-                        className="btn-primary"
-                        style={{ width: '100%', opacity: !nickname.trim() ? 0.5 : 1 }}
+                        style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '0.5rem', background: !nickname.trim() ? 'rgba(59, 130, 246, 0.3)' : 'linear-gradient(135deg, #3b82f6, #10b981)', color: 'white', fontWeight: '600', border: 'none', cursor: !nickname.trim() ? 'not-allowed' : 'pointer', fontSize: '1rem' }}
                     >
-                        시작하기
+                        Start Counseling
                     </button>
                 </div>
             </div>
