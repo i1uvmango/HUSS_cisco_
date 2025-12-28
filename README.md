@@ -139,6 +139,35 @@ npm run dev
 
 ---
 
+## 🔷 Cisco Webex Bot 역할
+
+Bridge-X는 **Cisco Webex Bot**을 활용하여 AI와 전문 상담사를 실시간으로 연결합니다.
+
+### 핵심 기능
+
+| Icon | Role |
+|:----:|------|
+| 🤖 → 🔷 | AI triggers Webex Bot upon crisis detection |
+| 📱 | Real-time notification to counselors |
+| 🎥 | Auto video meeting room creation |
+| ⚡ | Instant professional intervention |
+
+### 상담 유형별 알림
+
+| 상황 | Webex 미팅 제목 | 알림 유형 |
+|------|----------------|----------|
+| 자살/자해 언급 감지 | `[긴급] 심리 상담 세션` | 🚨 위기 알림 |
+| 감정 분석 후 risk_flag | `[긴급] 심리 상담 세션` | ⚠️ 리스크 알림 |
+| 사용자 자발적 요청 | `[상담 요청] 심리 상담 세션` | 👤 일반 알림 |
+
+### 워크플로우
+
+```
+청소년 → AI 채팅 → 위기 감지 → Webex Bot → 자동 미팅 생성 → 상담사 알림 → 화상 상담
+```
+
+---
+
 ## 🔒 프라이버시 설계
 
 > [!IMPORTANT]
@@ -168,6 +197,7 @@ npm run dev
 | Backend | NestJS, TypeORM, PostgreSQL |
 | AI | **Google Gemini API** (Gemini 2.5 Flash / Pro) |
 | Video | **Cisco Webex Meetings API** |
+| Bot | **Cisco Webex Bot** (Auto Meeting & Push Notification) |
 
 ---
 
@@ -178,3 +208,9 @@ npm run dev
 - **그라데이션**: 부드러운 색상 전환
 - **마이크로 애니메이션**: 자연스러운 인터랙션
 - **반응형**: 모바일 우선 설계
+
+---
+
+## 📄 License
+
+MIT License © 2025 Bridge-X Team
