@@ -21,6 +21,7 @@ export class CounselingService {
         const meeting = await this.webexService.createCounselingMeeting(
             dto.user_id,
             dto.summary_id,
+            false  // isUrgent: 유저 요청 상담 (긴급 아님)
         );
 
         // Save session to database

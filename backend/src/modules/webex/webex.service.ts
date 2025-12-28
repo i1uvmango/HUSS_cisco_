@@ -30,19 +30,25 @@ export class WebexService {
     async createCounselingMeeting(
         userId: string,
         summaryId: string,
+        isUrgent: boolean = false,
     ): Promise<WebexMeeting> {
         try {
             const now = new Date();
             const start = new Date(now.getTime()); // 즉시 시작 (지연 없음)
             const end = new Date(start.getTime() + 60 * 60000); // 1시간 미팅
 
-            this.logger.log(`Creating Webex meeting for user: ${userId}`);
+            // 긴급 상담과 일반 상담 요청 구분
+            const meetingTitle = isUrgent
+                ? `[긴급] 심리 상담 세션 - ${userId.slice(0, 8)}`
+                : `[상담 요청] 심리 상담 세션 - ${userId.slice(0, 8)}`;
+
+            this.logger.log(`Creating Webex meeting for user: ${userId} (urgent: ${isUrgent})`);
             // Mask token for security in logs
             const token = this.configService.get('WEBEX_ACCESS_TOKEN');
             this.logger.debug(`Token being used (first 10 chars): ${token?.substring(0, 10)}...`);
 
             const payload = {
-                title: `심리 상담 세션 - ${userId.slice(0, 8)}`,
+                title: meetingTitle,
                 start: start.toISOString(),
                 end: end.toISOString(),
                 enabledAutoRecordMeeting: false,

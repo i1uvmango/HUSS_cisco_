@@ -36,7 +36,7 @@ export default function ChatInterface({ onSessionReady }: ChatInterfaceProps) {
             } catch (error) {
                 console.error('Greeting error:', error);
                 // Fallback greeting
-                setMessages([{ role: 'assistant', content: "Hey, it's safe here. How do you feel? :)" }]);
+                setMessages([{ role: 'assistant', content: "안녕! 😊 여기는 네가 편하게 이야기할 수 있는 공간이야. 오늘 기분은 어때?" }]);
                 setIsInitialized(true);
             }
         };
@@ -97,7 +97,7 @@ export default function ChatInterface({ onSessionReady }: ChatInterfaceProps) {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' }}>
             {/* Messages area */}
-            <div style={{ flex: 1, overflowY: 'auto', padding: '1.5rem 1rem', paddingTop: '2rem' }}>
+            <div style={{ flex: 1, overflowY: 'auto', paddingTop: '4cm', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '0.5rem' }}>
                 {!isInitialized && isLoading && messages.length === 0 && (
                     <div style={{ textAlign: 'center', padding: '3rem 0' }} className="animate-fadeIn">
                         <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }} className="animate-float">🌿</div>

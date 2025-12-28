@@ -50,6 +50,7 @@ export class SummaryService {
                 const meeting = await this.webexService.createCounselingMeeting(
                     dto.user_id,
                     saved.summary_id,
+                    true  // isUrgent: 리스크 감지 시 긴급 상담
                 );
                 meeting_url = meeting.webLink;
             } catch (error) {

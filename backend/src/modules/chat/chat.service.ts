@@ -64,7 +64,8 @@ export class ChatService {
                     // We use a dummy user ID for now or anonymous
                     const meeting = await this.webexService.createCounselingMeeting(
                         `anonymous-${currentSessionId.substring(0, 8)}`,
-                        'crisis-auto-generated'
+                        'crisis-auto-generated',
+                        true  // isUrgent: 위기 감지 시 긴급 상담
                     );
                     meeting_url = meeting.webLink;
 
@@ -103,7 +104,7 @@ export class ChatService {
 
     async startSession(): Promise<{ greeting: string; sessionId: string }> {
         const sessionId = uuidv4();
-        const greeting = "안녕하세요! 마음이 힘드실 때 언제든 찾아주세요. 오늘 기분이 어떠신가요?";
+        const greeting = "안녕! 반가워 😊 여기는 네가 편하게 이야기할 수 있는 공간이야. 오늘 하루는 어땠어? 네 이야기가 궁금해!";
 
         // Initialize session
         sessionStore.set(sessionId, [
