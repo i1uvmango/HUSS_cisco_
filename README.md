@@ -1,6 +1,6 @@
 # 🌉 Bridge-X - Refugee Youth Mental Health Platform
 
-AI-powered psychological support platform for refugee youth in conflict zones, powered by **Google Gemini** and **Cisco Webex**.
+AI-powered online psychological counseiling support platform for youth/children in war conflict zones, powered by **Google Gemini** and **Cisco Webex**.
 
 ---
 
